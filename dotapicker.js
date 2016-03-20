@@ -298,9 +298,9 @@
 			'				<ul style="text-shadow: none;">' +
 			'					<li>When the enemy picks a hero, click the <span class="text-danger">red [+] button</span> to add that hero to the enemy team</li>' +
 			'					<li>When teammate picks a hero, click the <span class="text-success">green [+] button</span> to add that hero to your team</li>' +
-			'					<li>The main area will show the best picks for side/core, mid, and support heroes</li>' +
 			'					<li>You can remove individual heroes by clicking on their images in the team selection area</li>' +
-			'					<li>In the matchup area, <span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possiby bad picks</span>, & <span class="text-danger">Red = Very bad picks</span></li>' +
+			'					<li>The main matchup area will show the best picks for side/core, mid, and support heroes</li>' +
+			'					<li><span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possiby bad picks</span>, & <span class="text-danger">Red = Very bad picks</span></li>' +
 			'				</ul>' +
 			'				<h4>How it works?</h4>' +
 			'				<ul style="text-shadow: none;">' +
@@ -308,17 +308,19 @@
 			'					<li>The data is gathered using an external screen-scraping tool, and is just moment in time, not ongoing updates</li>' +
 			'					<li>Win rates are averaged based on the heroes picked</li>' +
 			'					<li>Advantages are a combination of averages and cumulative (added and divided by 2)</li>' +
-			'					<li>Enemy counter picking is weighted than teammate combinations</li>' +
+			'					<li>Enemy counter picking is weighted more than teammate combinations</li>' +
 			'				</ul>' +
-			'				<h4>Inspiration and technology used?</h4>' +
+			'				<h4>Inspiration and history?</h4>' +
 			'				<ul style="text-shadow: none;">' +
-			'					<li>The idea for this app comes from onur on github and his <a href="http://onur.github.io/DotaBuffCP/">DotabuffCP app</a></li>' +
-			'					<li>Beta version of <a href="https://angular.io/">Angular 2</a></li>' +
-			'					<li>Alpha version of <a href="http://v4-alpha.getbootstrap.com/">Bootstrap 4</a></li>' +
+			'					<li>I initally started playing with an app from onur on github called <a href="http://onur.github.io/DotaBuffCP/">DotabuffCP app</a></li>' +
+			'					<li>After being frustrated with the way things were written, I re-wrote the app in <a href="https://angular.io/">Angular 2</a> and <a href="http://v4-alpha.getbootstrap.com/">Bootstrap 4</a> so that I could have greater control over the math and sorting</li>' +
+			'					<li>I then thought it would be cool to add teammate data, which can only be found on Datamax... it was not easy getting the screen scraper to get the proper data from a Chinese focused website</li>' +
 			'				</ul>' +
 			'				<h4>Credits?</h4>' +
 			'				<ul style="text-shadow: none;">' +
 			'					<li><a href="http://steamcommunity.com/profiles/76561198031077846">Relentless</a> - My main man, teammate, QA, and patient friend while I talked about ideas and constantly made changes to this app</li>' +
+			'					<li><a href="https://github.com/onur">Onur Aslan on Github</a> - For providing the screen scraper and providing a decent counter picker that others could build upon</li>' +
+			'					<li><a href="http://www.dotabuff.com/">Dotabuff</a> &amp; <a href="http://dotamax.com/">Dotamax</a> - For providing the data</li>' +
 			'				</ul>' +
 			'			</div>' +
 			'		</div>' +
