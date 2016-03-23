@@ -304,7 +304,7 @@
 			'				<br>' +
 			'				<h4>What is this?</h4>' +
 			'				<ul style="text-shadow: none;">' +
-			'					<li>Most apps like this one are referred to as &quot;counter-pickers&quot;</li>' +
+			'					<li>Most apps like this one are referred to as &quot;counter-pickers&quot; for the game <a href="http://blog.dota2.com/">Dota 2</a></li>' +
 			'					<li>It is a way to build the best possible team by countering the enemy picks</li>' +
 			'					<li>This app also takes teammate combinations into account in order to pick the most effective team</li>' +
 			'				</ul>' +
@@ -327,8 +327,8 @@
 			'				</ul>' +
 			'				<h4>Inspiration and history?</h4>' +
 			'				<ul style="text-shadow: none;">' +
-			'					<li>I initally started playing with an app from onur on github called <a href="http://onur.github.io/DotaBuffCP/">DotabuffCP</a></li>' +
-			'					<li>After being frustrated with the way things were written, I re-wrote the app in <a href="https://angular.io/">Angular 2</a> and <a href="http://v4-alpha.getbootstrap.com/">Bootstrap 4</a> so that I could have greater control over the math and sorting</li>' +
+			'					<li>I initially started playing with an app from onur on github called <a href="http://onur.github.io/DotaBuffCP/">DotabuffCP</a></li>' +
+			'					<li>Because I could not make the changed I wanted to onurs app, I re-wrote the app in <a href="https://angular.io/">Angular 2</a> and <a href="http://v4-alpha.getbootstrap.com/">Bootstrap 4</a> so that I could have greater control over the math and sorting</li>' +
 			'					<li>I then thought it would be cool to add teammate data, which can only be found on Datamax (chinese focused version of Dotabuff), so I had to jump through some hoops to get the webpage parser to get the correct data</li>' +
 			'					<li>After about a weeks worth of work, I finally got everything working properly</li>' +
 			'				</ul>' +
