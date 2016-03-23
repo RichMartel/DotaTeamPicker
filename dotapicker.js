@@ -185,7 +185,15 @@
 			}
 			// Sort using both advantage and winrate
 			this.matchups.sort(function(a, b) {
-				return (b.advantage + ((b.winrate - 50) / 2)) - (a.advantage + ((a.winrate - 50) / 2));
+				if (b.winrate > 50 && a.winrate < 50) {
+					return 1;
+				}
+				else if (b.winrate < 50 && a.winrate > 50) {
+					return -1;
+				}
+				else {
+					return (b.advantage + ((b.winrate - 50) / 2)) - (a.advantage + ((a.winrate - 50) / 2));
+				}
 			});
 			// Create core, mid, & support matchup lists
 			for (i = 0; i < this.matchups.length; i++) {
@@ -232,20 +240,20 @@
 			'		</div>' +
 			'		<br>' +
 			'		<div class="row" style="height: 56px;">' +
-			'			<div class="col-md-6 col-xs-6">' +
+			'			<div class="col-md-6 col-xs-12">' +
 			'				<div><h6 class="text-danger">Enemy team:</h6></div>' +
-			'				<img *ngFor="#hero of enemiesSelected" (click)="removeEnemiesSelected(hero)" src="{{hero.img}}" class="img" width="' + screen.width/20 + '" title="Click to remove">' +
+			'				<img *ngFor="#hero of enemiesSelected" (click)="removeEnemiesSelected(hero)" src="{{hero.img}}" class="img" width="{{imageWidth}}" title="Click to remove">' +
 			'			</div>' +
-			'			<div class="col-md-6 col-xs-6">' +
+			'			<div class="col-md-6 col-xs-12">' +
 			'				<div><h6 class="text-success">My team:</h6></div>' +
-			'				<img *ngFor="#hero of friendsSelected" (click)="removeFriendsSelected(hero)" src="{{hero.img}}" class="img" width="' + screen.width/20 + '" title="Click to remove">' +
+			'				<img *ngFor="#hero of friendsSelected" (click)="removeFriendsSelected(hero)" src="{{hero.img}}" class="img" width="{{imageWidth}}" title="Click to remove">' +
 			'			</div>' +
 			'		</div>' +
 			'		<br>' +
 			'		<br>' +
 			'		<div class="row">' +
-			'			<div class="col-md-4 col-xs-4">' +
-			'				<h5 style="text-align: center;">Side/core heroes</h5>' +
+			'			<div class="col-md-4 col-xs-12">' +
+			'				<h5 style="text-align: center;">Side/core<span class="hidden-md-down"> heroes</span></h5>' +
 			'				<div class="list-group">' +
 			'					<div *ngFor="#heroMatchup of coreMatchups" class="list-group-item {{heroMatchup.class}}" style="padding: .5rem .5rem;">' +
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
@@ -258,8 +266,8 @@
 			'					</div>' +
 			'				</div>' +
 			'			</div>' +
-			'			<div class="col-md-4 col-xs-4">' +
-			'				<h5 style="text-align: center;">Mid heroes</h5>' +
+			'			<div class="col-md-4 col-xs-12">' +
+			'				<h5 style="text-align: center;">Mid<span class="hidden-md-down"> heroes</span></h5>' +
 			'				<div class="list-group">' +
 			'					<div *ngFor="#heroMatchup of midMatchups" class="list-group-item {{heroMatchup.class}}" style="padding: .5rem .5rem;">' +
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
@@ -272,8 +280,8 @@
 			'					</div>' +
 			'				</div>' +
 			'			</div>' +
-			'			<div class="col-md-4 col-xs-4">' +
-			'				<h5 style="text-align: center;">Support heroes</h5>' +
+			'			<div class="col-md-4 col-xs-12">' +
+			'				<h5 style="text-align: center;">Support<span class="hidden-md-down"> heroes</span></h5>' +
 			'				<div class="list-group">' +
 			'					<div *ngFor="#heroMatchup of supportMatchups" class="list-group-item {{heroMatchup.class}}" style="padding: .5rem .5rem;">' +
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
@@ -294,32 +302,40 @@
 			'				<h1 style="text-align: center;">Dota Team Picker</h1>' +
 			'				<h3 style="text-align: center;">by <a href="http://steamcommunity.com/id/richmartel/">NoMercy</a></h3>' +
 			'				<br>' +
+			'				<h4>What is this?</h4>' +
+			'				<ul style="text-shadow: none;">' +
+			'					<li>Most apps like this one are referred to as &quot;counter-pickers&quot;</li>' +
+			'					<li>It is a way to build the best possible team by countering the enemy picks</li>' +
+			'					<li>This app also takes teammate combinations into account in order to pick the most effective team</li>' +
+			'				</ul>' +
 			'				<h4>How to use?</h4>' +
 			'				<ul style="text-shadow: none;">' +
 			'					<li>When the enemy picks a hero, click the <span class="text-danger">red [+] button</span> to add that hero to the enemy team</li>' +
-			'					<li>When teammate picks a hero, click the <span class="text-success">green [+] button</span> to add that hero to your team</li>' +
+			'					<li>When a teammate picks a hero, click the <span class="text-success">green [+] button</span> to add that hero to your team</li>' +
 			'					<li>You can remove individual heroes by clicking on their images in the team selection area</li>' +
 			'					<li>The main matchup area will show the best picks for side/core, mid, and support heroes</li>' +
-			'					<li><span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possiby bad picks</span>, & <span class="text-danger">Red = Very bad picks</span></li>' +
+			'					<li><span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possibe bad picks</span>, & <span class="text-danger">Red = Very bad picks</span></li>' +
 			'				</ul>' +
 			'				<h4>How it works?</h4>' +
 			'				<ul style="text-shadow: none;">' +
-			'					<li>The data used to determine best picks is from <a href="http://www.dotabuff.com/">Dotabuff</a> matchup data, and <a href="http://dotamax.com/">Dotamax</a> teammate data</li>' +
-			'					<li>The data is gathered using an external screen-scraping tool, and is just moment in time, not ongoing updates</li>' +
+			'					<li>The data used to determine best picks is gathered from <a href="http://www.dotabuff.com/">Dotabuff</a> matchup data, and <a href="http://dotamax.com/">Dotamax</a> teammate data</li>' +
+			'					<li>The data is gathered using an external perl script that builds the data import</li>' +
 			'					<li>Win rates are averaged based on the heroes picked</li>' +
-			'					<li>Advantages are a combination of averages and cumulative (added and divided by 2)</li>' +
-			'					<li>Enemy counter picking is weighted more than teammate combinations</li>' +
+			'					<li>Advantages are the (average advantage + cumulative advantage) / 2</li>' +
+			'					<li>Teammate lineup is weighted half as much as enemy lineup in order to make sure that appropriate counters are shown</li>' +
+			'					<li>Sorting takes both winrates and advantages into account</li>' +
 			'				</ul>' +
 			'				<h4>Inspiration and history?</h4>' +
 			'				<ul style="text-shadow: none;">' +
-			'					<li>I initally started playing with an app from onur on github called <a href="http://onur.github.io/DotaBuffCP/">DotabuffCP app</a></li>' +
+			'					<li>I initally started playing with an app from onur on github called <a href="http://onur.github.io/DotaBuffCP/">DotabuffCP</a></li>' +
 			'					<li>After being frustrated with the way things were written, I re-wrote the app in <a href="https://angular.io/">Angular 2</a> and <a href="http://v4-alpha.getbootstrap.com/">Bootstrap 4</a> so that I could have greater control over the math and sorting</li>' +
-			'					<li>I then thought it would be cool to add teammate data, which can only be found on Datamax... it was not easy getting the screen scraper to get the proper data from a Chinese focused website</li>' +
+			'					<li>I then thought it would be cool to add teammate data, which can only be found on Datamax (chinese focused version of Dotabuff), so I had to jump through some hoops to get the webpage parser to get the correct data</li>' +
+			'					<li>After about a weeks worth of work, I finally got everything working properly</li>' +
 			'				</ul>' +
 			'				<h4>Credits?</h4>' +
 			'				<ul style="text-shadow: none;">' +
-			'					<li><a href="http://steamcommunity.com/profiles/76561198031077846">Relentless</a> - My main man, teammate, QA, and patient friend while I talked about ideas and constantly made changes to this app</li>' +
-			'					<li><a href="https://github.com/onur">Onur Aslan on Github</a> - For providing the screen scraper and providing a decent counter picker that others could build upon</li>' +
+			'					<li><a href="http://steamcommunity.com/profiles/76561198031077846">Relentless</a> - My main man, teammate, QA, and patient friend</li>' +
+			'					<li><a href="https://github.com/onur">Onur Aslan</a> - For providing a decent counter picker that others could look at</li>' +
 			'					<li><a href="http://www.dotabuff.com/">Dotabuff</a> &amp; <a href="http://dotamax.com/">Dotamax</a> - For providing the data</li>' +
 			'				</ul>' +
 			'			</div>' +
@@ -336,6 +352,11 @@
 			this.coreMatchups = [];
 			this.supportMatchups = [];
 			this.midMatchups = [];
+			this.imageWidth = (window.innerWidth/18 < 100) ? window.innerWidth/18 : 100;
+			if (window.innerWidth < 544) {
+				this.imageWidth = 40
+			}
+			this.imageHeight = this.imageWidth * .56
 		}],
 		addEnemiesSelected: function(hero) {
 			if (this.enemiesSelected.length < 5) {
