@@ -167,8 +167,8 @@
 			}
 			// Average advantages and winrates
 			for (i = 0; i < this.matchups.length; i++) {
-				this.matchups[i].advantage = (this.matchups[i].advantage + (this.matchups[i].advantage / (this.enemiesSelected.length + this.friendsSelected.length))) / 2;
-				this.matchups[i].winrate = this.matchups[i].winrate / (this.enemiesSelected.length + this.friendsSelected.length);
+				this.matchups[i].advantage = (this.matchups[i].advantage + (this.matchups[i].advantage / (this.enemiesSelected.length + this.friendsSelected.length * .9))) / 2;
+				this.matchups[i].winrate = this.matchups[i].winrate / (this.enemiesSelected.length + this.friendsSelected.length * .9);
 				// Add bootstrap list-item styling (blue = great, green = good, yellow = possibly bad, red = bad)
 				if (this.matchups[i].winrate > 55) {
 					this.matchups[i].class = 'list-group-item-success';
