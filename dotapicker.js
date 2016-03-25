@@ -245,7 +245,7 @@
 			'			<button class="btn btn-primary center-block" (click)="removeAllSelected()">Clear</button>' +
 			'		</div>' +
 			'		<br>' +
-			'		<div class="row" style="height: 56px;">' +
+			'		<div class="row" style="height: {{imageHeight}}px;">' +
 			'			<div class="col-md-6 col-xs-12">' +
 			'				<div><h6 class="text-danger">Enemy team:</h6></div>' +
 			'				<img *ngFor="#hero of enemiesSelected" (click)="removeEnemiesSelected(hero)" src="{{hero.img}}" class="img" width="{{imageWidth}}" title="Click to remove">' +
