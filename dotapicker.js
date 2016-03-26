@@ -29,51 +29,83 @@
 			this.supportMatchups = [];
 			this.midMatchups = [];
 			this.supportHeroes = [
-				'Io',
-				'Treant Protector',
-				'Vengeful Spirit',
+				'Ancient Apparition',
+				'Bane',
+				'Chen',
 				'Crystal Maiden',
 				'Dazzle',
+				'Disruptor',
+				'Earthshaker',
+				'Io',
+				'Jakiro',
 				'Keeper of the Light',
 				'Lich',
-				'Oracle',
-				'Winter Wyvern',
-				'Witch Doctor',
-				'Bane',
 				'Lion',
-				'Disruptor',
-				'Shadow Demon',
-				'Rubick',
-				'Omniknight',
 				'Ogre Magi',
-				'Ancient Apparition',
-				'Chen',
-				'Skywrath Mage',
-				'Jakiro',
-				'Earthshaker',
+				'Omniknight',
+				'Oracle',
+				'Rubick',
+				'Shadow Demon',
 				'Shadow Shaman',
-				'Warlock'
+				'Skywrath Mage',
+				'Treant Protector',
+				'Vengeful Spirit',
+				'Warlock',
+				'Winter Wyvern',
+				'Witch Doctor'
 			];
 			this.midHeroes = [
-				'Shadow Fiend',
-				'Templar Assassin',
-				'Storm Spirit',
-				'Tinker',
-				'Invoker',
-				'Outworld Devourer',
-				'Queen of Pain',
-				'Death Prophet',
-				'Puck',
-				'Zeus',
-				'Leshrac',
-				'Ember Spirit',
-				'Viper',
-				'Lina',
 				'Alchemist',
-				'Windranger',
+				'Death Prophet',
+				'Dragon Knight',
+				'Ember Spirit',
+				'Invoker',
+				'Leshrac',
+				'Lina',
+				'Outworld Devourer',
+				'Puck',
 				'Pudge',
+				'Queen of Pain',
 				'Razor',
-				'Dragon Knight'
+				'Shadow Fiend',
+				'Storm Spirit',
+				'Templar Assassin',
+				'Tinker',
+				'Viper',
+				'Windranger',
+				'Zeus'
+			];
+			this.carryHeroes = [
+				'Alchemist',
+				'Anti-mage',
+				'Arc Warden',
+				'Chaos Knight',
+				'Ember Spirit',
+				'Gyrocopter',
+				'Juggernaut',
+				'Legion Commander',
+				'Lifestealer',
+				'Lone Druid',
+				'Luna',
+				'Lycan',
+				'Medusa',
+				'Morphling',
+				'Naga Siren',
+				'Natures Prophet',
+				'Outworld Devourer',
+				'Phantom Assassin',
+				'Shadow Fiend',
+				'Slark',
+				'Sniper',
+				'Spectre',
+				'Sven',
+				'Templar Assassin',
+				'Terrorblade',
+				'Tiny',
+				'Troll Warlord',
+				'Ursa',
+				'Weaver',
+				'Wraith King'
 			];
 		}],
 		getEnemiesSelected: function() {
@@ -131,8 +163,14 @@
 			for (i = 0; i < this.enemiesSelected.length; i++) {
 				for (var m = 0; m < this.enemiesSelected[i].enemyMatchups.length; m++) {
 					if (this.enemiesSelected[i].enemyMatchups[m]) {
-						this.matchups[m].advantage += -parseFloat(this.enemiesSelected[i].enemyMatchups[m][0]);
-						this.matchups[m].winrate += 100 - parseFloat(this.enemiesSelected[i].enemyMatchups[m][1]);
+						var multiplier = 1;
+						for (var c = 0; c < this.carryHeroes.length; c++) {
+							if (this.carryHeroes[c] === this.enemiesSelected[i].name) {
+								multiplier = 1.5;
+							}
+						}
+						this.matchups[m].advantage += -(parseFloat(this.enemiesSelected[i].enemyMatchups[m][0])) * multiplier;
+						this.matchups[m].winrate += 100 - (((parseFloat(this.enemiesSelected[i].enemyMatchups[m][1]) - 50) * multiplier) + 50);
 					}
 				}
 
@@ -169,7 +207,7 @@
 			for (i = 0; i < this.matchups.length; i++) {
 				this.matchups[i].advantage = (this.matchups[i].advantage + (this.matchups[i].advantage / (this.enemiesSelected.length + (this.friendsSelected.length * .85)))) / 2;
 				this.matchups[i].winrate = this.matchups[i].winrate / (this.enemiesSelected.length + (this.friendsSelected.length * .85));
-				// Add bootstrap list-item styling (blue = great, green = good, yellow = possibly bad, red = bad)
+				// Add bootstrap list-item styling (blue = great, green = good, yellow = possible bad, red = bad)
 				if (this.matchups[i].winrate > 55) {
 					this.matchups[i].class = 'list-group-item-success';
 				}
