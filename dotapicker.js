@@ -81,6 +81,7 @@
 				'Arc Warden',
 				'Chaos Knight',
 				'Ember Spirit',
+				'Faceless Void',
 				'Gyrocopter',
 				'Juggernaut',
 				'Legion Commander',
