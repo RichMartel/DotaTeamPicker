@@ -80,6 +80,7 @@
 				'Anti-mage',
 				'Arc Warden',
 				'Chaos Knight',
+				'Drow Ranger',
 				'Ember Spirit',
 				'Faceless Void',
 				'Gyrocopter',
