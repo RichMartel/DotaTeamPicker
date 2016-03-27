@@ -83,6 +83,7 @@
 				'Ember Spirit',
 				'Faceless Void',
 				'Gyrocopter',
+				'Invoker',
 				'Juggernaut',
 				'Legion Commander',
 				'Lifestealer',
@@ -95,6 +96,7 @@
 				'Natures Prophet',
 				'Outworld Devourer',
 				'Phantom Assassin',
+				'Queen of Pain',
 				'Shadow Fiend',
 				'Slark',
 				'Sniper',
@@ -105,6 +107,7 @@
 				'Tiny',
 				'Troll Warlord',
 				'Ursa',
+				'Viper',
 				'Weaver',
 				'Wraith King'
 			];
