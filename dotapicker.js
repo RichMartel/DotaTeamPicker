@@ -307,7 +307,7 @@
 			'						<div class="pull-right">' +
 			'							<abbr class="initialism" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism" title="Advantage">{{heroMatchup.advantage.toFixed(2)}}%</abbr>' +
+			'							<abbr class="initialism" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -321,7 +321,7 @@
 			'						<div class="pull-right">' +
 			'							<abbr class="initialism" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism" title="Advantage">{{heroMatchup.advantage.toFixed(2)}}%</abbr>' +
+			'							<abbr class="initialism" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -335,7 +335,7 @@
 			'						<div class="pull-right">' +
 			'							<abbr class="initialism" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism" title="Advantage">{{heroMatchup.advantage.toFixed(2)}}%</abbr>' +
+			'							<abbr class="initialism" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -463,6 +463,9 @@
 			this.coreMatchups = [];
 			this.supportMatchups = [];
 			this.midMatchups = [];
+		},
+		formatAdvantage: function(advantage) {
+			return (advantage > 0) ? '+' + advantage.toFixed(2) : advantage.toFixed(2)
 		}
 	});
 
