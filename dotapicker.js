@@ -268,7 +268,7 @@
 		template: '' +
 			'<div class="row">' +
 			'	<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">' +
-			'		<div style="overflow-y: auto; position: fixed; height: 100vh;">' +
+			'		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 185px;">' +
 			'			<ul class="nav nav-pills nav-stacked" style="margin-top: 15px; margin-bottom: 15px; margin-right: 10px;">' +
 			'				<li class="nav-item" *ngFor="#hero of heroes">' +
 			'					<div class="btn-group" role="group">' +
