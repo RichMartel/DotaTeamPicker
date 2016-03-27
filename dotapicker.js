@@ -306,9 +306,9 @@
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
 			'						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>' +
 			'						<div class="pull-right">' +
-			'							<abbr class="initialism" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
+			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
+			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -320,9 +320,9 @@
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
 			'						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>' +
 			'						<div class="pull-right">' +
-			'							<abbr class="initialism" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
+			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
+			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -334,9 +334,9 @@
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
 			'						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>' +
 			'						<div class="pull-right">' +
-			'							<abbr class="initialism" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
+			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
+			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
