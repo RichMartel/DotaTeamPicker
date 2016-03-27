@@ -385,6 +385,10 @@
 			'					<li><a href="https://github.com/onur">Onur Aslan</a> - For providing a decent counter picker that others could look at</li>' +
 			'					<li><a href="http://www.dotabuff.com/">Dotabuff</a> &amp; <a href="http://dotamax.com/">Dotamax</a> - For providing the data</li>' +
 			'				</ul>' +
+			'				<h4>Interested in contributing?</h4>' +
+			'				<ul style="text-shadow: none;">' +
+			'					<li><a href="https://github.com/RichMartel/DotaTeamPicker">Github</a> - Feel free to make pull requests for any changes, or send me feature requests</li>' +
+			'				</ul>' +
 			'			</div>' +
 			'		</div>' +
 			'	</div>' +
