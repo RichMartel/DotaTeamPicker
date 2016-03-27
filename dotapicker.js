@@ -231,10 +231,10 @@
 				else if (b.winrate < 50 && a.winrate > 50) {
 					return -1;
 				}
-				else if ((b.advantage - a.advantage) > 2) {
+				else if ((b.advantage - a.advantage) > 3) {
 					return 1;
 				}
-				else if ((b.advantage - a.advantage) < -2) {
+				else if ((b.advantage - a.advantage) < -3) {
 					return -1;
 				}
 				else {
