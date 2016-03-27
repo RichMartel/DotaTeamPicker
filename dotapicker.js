@@ -211,7 +211,9 @@
 				if (this.matchups[i].winrate > 55) {
 					this.matchups[i].class = 'list-group-item-success';
 				}
-				if (this.matchups[i].advantage > 2 && this.matchups[i].winrate > 55) {
+				if ((this.matchups[i].advantage > 2 && this.matchups[i].winrate > 55) ||
+					(this.matchups[i].advantage > 1 && this.matchups[i].winrate > 60) ||
+					(this.matchups[i].advantage > 0 && this.matchups[i].winrate > 65)) {
 					this.matchups[i].class = 'list-group-item-info';
 				}
 				if (this.matchups[i].advantage < 0 || this.matchups[i].winrate < 50) {
