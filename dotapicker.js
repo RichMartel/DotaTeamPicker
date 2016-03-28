@@ -236,12 +236,6 @@
 				else if (b.winrate < 50 && a.winrate > 50) {
 					return -1;
 				}
-				else if ((b.advantage - a.advantage) > 3) {
-					return 1;
-				}
-				else if ((b.advantage - a.advantage) < -3) {
-					return -1;
-				}
 				else {
 					return (b.advantage + ((b.winrate - 50) / 2)) - (a.advantage + ((a.winrate - 50) / 2));
 				}
@@ -365,7 +359,7 @@
 			'					<li>When a teammate picks a hero, click the <span class="text-success">green [+] button</span> to add that hero to your team</li>' +
 			'					<li>You can remove individual heroes by clicking on their images in the team selection area</li>' +
 			'					<li>The main matchup area will show the best picks for side/core, mid, and support heroes</li>' +
-			'					<li><span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possibe bad picks</span>, & <span class="text-danger">Red = Very bad picks</span></li>' +
+			'					<li><span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possibe bad picks</span>, <span class="text-danger">Red = Very bad picks</span></li>' +
 			'				</ul>' +
 			'				<h4>How it works?</h4>' +
 			'				<ul style="text-shadow: none;">' +
@@ -374,6 +368,7 @@
 			'					<li>Win rates are averaged based on the heroes picked</li>' +
 			'					<li>Advantages are the (average advantage + cumulative advantage) / 2</li>' +
 			'					<li>Teammate lineup is weighted half as much as enemy lineup in order to make sure that appropriate counters are shown</li>' +
+			'					<li>Enemy carries are weighted more than normal heroes so that the counters will be more focused around that carry</li>' +
 			'					<li>Sorting takes both winrates and advantages into account</li>' +
 			'				</ul>' +
 			'				<h4>Inspiration and history?</h4>' +
