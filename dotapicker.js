@@ -77,7 +77,7 @@
 			];
 			this.carryHeroes = [
 				'Alchemist',
-				'Anti-mage',
+				'Anti-Mage',
 				'Arc Warden',
 				'Chaos Knight',
 				'Drow Ranger',
@@ -166,14 +166,14 @@
 			}
 			// Add advantages and winrates
 			for (i = 0; i < this.enemiesSelected.length; i++) {
+				var multiplier = 1;
+				for (var c = 0; c < this.carryHeroes.length; c++) {
+					if (this.carryHeroes[c] === this.enemiesSelected[i].name) {
+						multiplier = 1.5;
+					}
+				}
 				for (var m = 0; m < this.enemiesSelected[i].enemyMatchups.length; m++) {
 					if (this.enemiesSelected[i].enemyMatchups[m]) {
-						var multiplier = 1;
-						for (var c = 0; c < this.carryHeroes.length; c++) {
-							if (this.carryHeroes[c] === this.enemiesSelected[i].name) {
-								multiplier = 1.5;
-							}
-						}
 						this.matchups[m].advantage += -(parseFloat(this.enemiesSelected[i].enemyMatchups[m][0])) * multiplier;
 						this.matchups[m].winrate += 100 - (((parseFloat(this.enemiesSelected[i].enemyMatchups[m][1]) - 50) * multiplier) + 50);
 					}
@@ -262,14 +262,30 @@
 		}
 	});
 
+	app.FilterPipe = ng.core.Pipe({
+		name: 'filterHeroes'
+	})
+	.Class({
+		constructor: function () {
+
+		},
+		transform: function (array, filterString) {
+			return array.filter(function (item) {
+				return item.name.toLowerCase().startsWith(filterString)
+			})
+		}
+	});
+
 	app.AppComponent = ng.core.Component({
 		selector: 'app',
+		pipes: [app.FilterPipe],
 		template: '' +
 			'<div class="row">' +
 			'	<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">' +
 			'		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 185px;">' +
-			'			<ul class="nav nav-pills nav-stacked" style="margin-top: 15px; margin-bottom: 15px; margin-right: 10px;">' +
-			'				<li class="nav-item" *ngFor="#hero of heroes">' +
+			'			<input type="search" id="filterInput" class="form-control" placeholder="Search" style="margin-top: 15px; width: 157px;" autofocus [(ngModel)]="filterString">' +
+			'			<ul class="nav nav-pills nav-stacked" style="margin-top: 5px; margin-bottom: 15px; margin-right: 10px;">' +
+			'				<li class="nav-item" *ngFor="#hero of heroes | filterHeroes:filterString">' +
 			'					<div class="btn-group" role="group">' +
 			'						<button type="button" class="btn btn-success" title="Add to my team" (click)="addFriendsSelected(hero)"><i class="fa fa-plus"></i></button>' +
 			'						<span class="btn" style="cursor: default; width: 66px; height: 38px; background: url({{hero.img}}); background-size: 66px 38px; vertical-align: bottom; padding-left: 5px; padding-top: 18px;" title="{{hero.name}}"><span style="text-align: left; font-size: 10px; background-color: rgba(32, 32, 32, 0.7);">{{hero.name}}</span></span>' +
@@ -397,6 +413,7 @@
 		constructor: [app.HeroService, app.SelectionService, function(heroService, selectionService) {
 			this.selectionService = selectionService;
 			this.heroes = heroService.get();
+			this.filterString = '';
 			this.enemiesSelected = selectionService.getEnemiesSelected();
 			this.friendsSelected = selectionService.getFriendsSelected();
 			this.coreMatchups = [];
@@ -427,6 +444,8 @@
 					this.supportMatchups = this.selectionService.getSupportMatchups();
 					this.midMatchups = this.selectionService.getMidMatchups();
 				}
+				this.filterString = '';
+				document.getElementById("filterInput").focus();
 			}
 		},
 		addFriendsSelected: function(hero) {
@@ -448,6 +467,8 @@
 					this.supportMatchups = this.selectionService.getSupportMatchups();
 					this.midMatchups = this.selectionService.getMidMatchups();
 				}
+				this.filterString = '';
+				document.getElementById("filterInput").focus();
 			}
 		},
 		removeEnemiesSelected: function(hero) {
@@ -474,6 +495,7 @@
 	});
 
 	document.addEventListener('DOMContentLoaded', function() {
+		ng.core.enableProdMode();
 		ng.platform.browser.bootstrap(app.AppComponent, [app.HeroService, app.SelectionService]);
 	});
 
