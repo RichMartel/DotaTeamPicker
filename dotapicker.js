@@ -267,11 +267,11 @@
 	})
 	.Class({
 		constructor: function () {
-
 		},
 		transform: function (array, filterString) {
+			var substring = filterString.toString().toLowerCase();
 			return array.filter(function (item) {
-				return item.name.toLowerCase().startsWith(filterString)
+				return (item.name.toLowerCase().indexOf(substring) > -1);
 			})
 		}
 	});
@@ -283,7 +283,7 @@
 			'<div class="row">' +
 			'	<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">' +
 			'		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 185px;">' +
-			'			<input type="search" id="filterInput" class="form-control" placeholder="Search" style="margin-top: 15px; width: 157px;" autofocus [(ngModel)]="filterString">' +
+			'			<input type="search" id="filterInput" class="form-control" placeholder="Search" style="margin-top: 15px; width: 157px;" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">' +
 			'			<ul class="nav nav-pills nav-stacked" style="margin-top: 5px; margin-bottom: 15px; margin-right: 10px;">' +
 			'				<li class="nav-item" *ngFor="#hero of heroes | filterHeroes:filterString">' +
 			'					<div class="btn-group" role="group">' +
@@ -424,6 +424,10 @@
 				this.imageWidth = 40
 			}
 			this.imageHeight = this.imageWidth * .56
+			this.touchBrowser = false;
+			if ('ontouchstart' in document.documentElement) {
+				this.touchBrowser = true;
+			}
 		}],
 		addEnemiesSelected: function(hero) {
 			if (this.enemiesSelected.length < 5) {
@@ -444,8 +448,10 @@
 					this.supportMatchups = this.selectionService.getSupportMatchups();
 					this.midMatchups = this.selectionService.getMidMatchups();
 				}
-				this.filterString = '';
-				document.getElementById("filterInput").focus();
+				if (!this.touchBrowser) {
+					this.filterString = '';
+					document.getElementById("filterInput").focus();
+				}
 			}
 		},
 		addFriendsSelected: function(hero) {
@@ -467,8 +473,10 @@
 					this.supportMatchups = this.selectionService.getSupportMatchups();
 					this.midMatchups = this.selectionService.getMidMatchups();
 				}
-				this.filterString = '';
-				document.getElementById("filterInput").focus();
+				if (!this.touchBrowser) {
+					this.filterString = '';
+					document.getElementById("filterInput").focus();
+				}
 			}
 		},
 		removeEnemiesSelected: function(hero) {
