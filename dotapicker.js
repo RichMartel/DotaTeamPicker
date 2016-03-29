@@ -283,7 +283,8 @@
 			'<div class="row">' +
 			'	<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">' +
 			'		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 185px;">' +
-			'			<input type="search" id="filterInput" class="form-control" placeholder="Search" style="margin-top: 15px; width: 157px;" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">' +
+			'			<div style="margin-top: 15px;"></div>' +
+			'			<input type="search" id="filterInput" class="form-control" placeholder="Search" style="width: 157px;" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">' +
 			'			<ul class="nav nav-pills nav-stacked" style="margin-top: 5px; margin-bottom: 15px; margin-right: 10px;">' +
 			'				<li class="nav-item" *ngFor="#hero of heroes | filterHeroes:filterString">' +
 			'					<div class="btn-group" role="group">' +
