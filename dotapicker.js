@@ -114,7 +114,8 @@
 				{
 					name: 'Clockwerk',
 					altNames: [
-						'Rattletrap'
+						'Rattletrap',
+						'cw'
 					]
 				},
 				{
@@ -208,6 +209,7 @@
 				{
 					name: 'Gyrocopter',
 					altNames: [
+						'gc'
 					]
 				},
 				{
@@ -479,7 +481,8 @@
 				{
 					name: 'Skywrath Mage',
 					altNames: [
-						'sm'
+						'sm',
+						'swm'
 					]
 				},
 				{
@@ -603,6 +606,7 @@
 				{
 					name: 'Venomancer',
 					altNames: [
+						'vm'
 					]
 				},
 				{
