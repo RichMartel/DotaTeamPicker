@@ -2,11 +2,673 @@
 
 	app.HeroService = ng.core.Class({
 		constructor: function() {
+
 			this.heroes = [];
+			var namesLookup = [
+				{
+					name: 'Abaddon',
+					altNames: [
+						'Lord of Avernus'
+					]
+				},
+				{
+					name: 'Alchemist',
+					altNames: [
+					]
+				},
+				{
+					name: 'Ancient Apparition',
+					altNames: [
+						'aa'
+					]
+				},
+				{
+					name: 'Anti-Mage',
+					altNames: [
+						'am'
+					]
+				},
+				{
+					name: 'Arc Warden',
+					altNames: [
+						'aw'
+					]
+				},
+				{
+					name: 'Axe',
+					altNames: [
+					]
+				},
+				{
+					name: 'Bane',
+					altNames: [
+					]
+				},
+				{
+					name: 'Batrider',
+					altNames: [
+						'br'
+					]
+				},
+				{
+					name: 'Beastmaster',
+					altNames: [
+						'bm'
+					]
+				},
+				{
+					name: 'Bloodseeker',
+					altNames: [
+						'bs'
+					]
+				},
+				{
+					name: 'Bounty Hunter',
+					altNames: [
+						'bh'
+					]
+				},
+				{
+					name: 'Brewmaster',
+					altNames: [
+						'Pandaren',
+						'bm'
+					]
+				},
+				{
+					name: 'Bristleback',
+					altNames: [
+						'bb'
+					]
+				},
+				{
+					name: 'Broodmother',
+					altNames: [
+						'bm'
+					]
+				},
+				{
+					name: 'Centaur Warrunner',
+					altNames: [
+						'cw'
+					]
+				},
+				{
+					name: 'Chaos Knight',
+					altNames: [
+						'ck'
+					]
+				},
+				{
+					name: 'Chen',
+					altNames: [
+						'Holy Knight'
+					]
+				},
+				{
+					name: 'Clinkz',
+					altNames: [
+						'Bone Fletcher'
+					]
+				},
+				{
+					name: 'Clockwerk',
+					altNames: [
+						'Rattletrap'
+					]
+				},
+				{
+					name: 'Crystal Maiden',
+					altNames: [
+						'cm'
+					]
+				},
+				{
+					name: 'Dark Seer',
+					altNames: [
+						'ds'
+					]
+				},
+				{
+					name: 'Dazzle',
+					altNames: [
+						'Shadow Priest'
+					]
+				},
+				{
+					name: 'Death Prophet',
+					altNames: [
+						'dp'
+					]
+				},
+				{
+					name: 'Disruptor',
+					altNames: [
+					]
+				},
+				{
+					name: 'Doom',
+					altNames: [
+					]
+				},
+				{
+					name: 'Dragon Knight',
+					altNames: [
+						'Davion',
+						'dk'
+					]
+				},
+				{
+					name: 'Drow Ranger',
+					altNames: [
+						'dr'
+					]
+				},
+				{
+					name: 'Earth Spirit',
+					altNames: [
+						'es'
+					]
+				},
+				{
+					name: 'Earthshaker',
+					altNames: [
+						'es'
+					]
+				},
+				{
+					name: 'Elder Titan',
+					altNames: [
+						'Tauren Chieftan',
+						'et'
+					]
+				},
+				{
+					name: 'Ember Spirit',
+					altNames: [
+						'es'
+					]
+				},
+				{
+					name: 'Enchantress',
+					altNames: [
+					]
+				},
+				{
+					name: 'Enigma',
+					altNames: [
+					]
+				},
+				{
+					name: 'Faceless Void',
+					altNames: [
+						'fv'
+					]
+				},
+				{
+					name: 'Gyrocopter',
+					altNames: [
+					]
+				},
+				{
+					name: 'Huskar',
+					altNames: [
+						'Sacred Warrior'
+					]
+				},
+				{
+					name: 'Invoker',
+					altNames: [
+					]
+				},
+				{
+					name: 'Io',
+					altNames: [
+						'Guardian Wisp'
+					]
+				},
+				{
+					name: 'Jakiro',
+					altNames: [
+						'Twin Head Dragon'
+					]
+				},
+				{
+					name: 'Juggernaut',
+					altNames: [
+					]
+				},
+				{
+					name: 'Keeper of the Light',
+					altNames: [
+						'kotl'
+					]
+				},
+				{
+					name: 'Kunkka',
+					altNames: [
+						'Admiral'
+					]
+				},
+				{
+					name: 'Legion Commander',
+					altNames: [
+						'lc'
+					]
+				},
+				{
+					name: 'Leshrac',
+					altNames: [
+						'Tormented Soul'
+					]
+				},
+				{
+					name: 'Lich',
+					altNames: [
+					]
+				},
+				{
+					name: 'Lifestealer',
+					altNames: [
+						'Naix',
+						'ls'
+					]
+				},
+				{
+					name: 'Lina',
+					altNames: [
+						'Slayer'
+					]
+				},
+				{
+					name: 'Lion',
+					altNames: [
+						'Demon Witch'
+					]
+				},
+				{
+					name: 'Lone Druid',
+					altNames: [
+						'ld'
+					]
+				},
+				{
+					name: 'Luna',
+					altNames: [
+						'Moon Rider'
+					]
+				},
+				{
+					name: 'Lycan',
+					altNames: [
+					]
+				},
+				{
+					name: 'Magnus',
+					altNames: [
+					]
+				},
+				{
+					name: 'Medusa',
+					altNames: [
+						'Gorgon'
+					]
+				},
+				{
+					name: 'Meepo',
+					altNames: [
+						'Geomancer'
+					]
+				},
+				{
+					name: 'Mirana',
+					altNames: [
+						'Priestess of the Moon'
+					]
+				},
+				{
+					name: 'Morphling',
+					altNames: [
+					]
+				},
+				{
+					name: 'Naga Siren',
+					altNames: [
+						'ns'
+					]
+				},
+				{
+					name: 'Natures Prophet',
+					altNames: [
+						'Furion',
+						'np'
+					]
+				},
+				{
+					name: 'Necrophos',
+					altNames: [
+					]
+				},
+				{
+					name: 'Night Stalker',
+					altNames: [
+						'ns'
+					]
+				},
+				{
+					name: 'Nyx Assassin',
+					altNames: [
+						'Nerubian',
+						'na'
+					]
+				},
+				{
+					name: 'Ogre Magi',
+					altNames: [
+						'om'
+					]
+				},
+				{
+					name: 'Omniknight',
+					altNames: [
+						'ok'
+					]
+				},
+				{
+					name: 'Oracle',
+					altNames: [
+					]
+				},
+				{
+					name: 'Outworld Devourer',
+					altNames: [
+						'Obsidian Destroyer',
+						'od'
+					]
+				},
+				{
+					name: 'Phantom Assassin',
+					altNames: [
+						'pa'
+					]
+				},
+				{
+					name: 'Phantom Lancer',
+					altNames: [
+						'pl'
+					]
+				},
+				{
+					name: 'Phoenix',
+					altNames: [
+					]
+				},
+				{
+					name: 'Puck',
+					altNames: [
+						'Faerie Dragon'
+					]
+				},
+				{
+					name: 'Pudge',
+					altNames: [
+						'Butcher'
+					]
+				},
+				{
+					name: 'Pugna',
+					altNames: [
+						'Oblivion'
+					]
+				},
+				{
+					name: 'Queen of Pain',
+					altNames: [
+						'qop'
+					]
+				},
+				{
+					name: 'Razor',
+					altNames: [
+						'Lightning Revenant'
+					]
+				},
+				{
+					name: 'Riki',
+					altNames: [
+						'Stealth Assassin'
+					]
+				},
+				{
+					name: 'Rubick',
+					altNames: [
+						'Grand Magus'
+					]
+				},
+				{
+					name: 'Sand King',
+					altNames: [
+						'sk'
+					]
+				},
+				{
+					name: 'Shadow Demon',
+					altNames: [
+						'sd'
+					]
+				},
+				{
+					name: 'Shadow Fiend',
+					altNames: [
+						'Nevermore',
+						'sf'
+					]
+				},
+				{
+					name: 'Shadow Shaman',
+					altNames: [
+						'Rhasta',
+						'ss'
+					]
+				},
+				{
+					name: 'Silencer',
+					altNames: [
+					]
+				},
+				{
+					name: 'Skywrath Mage',
+					altNames: [
+						'sm'
+					]
+				},
+				{
+					name: 'Slardar',
+					altNames: [
+						'Slithereen Guard'
+					]
+				},
+				{
+					name: 'Slark',
+					altNames: [
+						'Murloc Nightcrawler'
+					]
+				},
+				{
+					name: 'Sniper',
+					altNames: [
+						'Dwarven Sniper'
+					]
+				},
+				{
+					name: 'Spectre',
+					altNames: [
+					]
+				},
+				{
+					name: 'Spirit Breaker',
+					altNames: [
+						'sb'
+					]
+				},
+				{
+					name: 'Storm Spirit',
+					altNames: [
+						'ss'
+					]
+				},
+				{
+					name: 'Sven',
+					altNames: [
+						'Rogue Knight'
+					]
+				},
+				{
+					name: 'Techies',
+					altNames: [
+						'Goblin'
+					]
+				},
+				{
+					name: 'Templar Assassin',
+					altNames: [
+						'ta'
+					]
+				},
+				{
+					name: 'Terrorblade',
+					altNames: [
+						'Soul Keeper',
+						'tb'
+					]
+				},
+				{
+					name: 'Tidehunter',
+					altNames: [
+						'th'
+					]
+				},
+				{
+					name: 'Timbersaw',
+					altNames: [
+						'Goblin Shredder',
+						'ts'
+					]
+				},
+				{
+					name: 'Tinker',
+					altNames: [
+					]
+				},
+				{
+					name: 'Tiny',
+					altNames: [
+						'Stone Giant'
+					]
+				},
+				{
+					name: 'Treant Protector',
+					altNames: [
+						'tp'
+					]
+				},
+				{
+					name: 'Troll Warlord',
+					altNames: [
+						'tw'
+					]
+				},
+				{
+					name: 'Tusk',
+					altNames: [
+					]
+				},
+				{
+					name: 'Undying',
+					altNames: [
+					]
+				},
+				{
+					name: 'Ursa',
+					altNames: [
+						'Warrior'
+					]
+				},
+				{
+					name: 'Vengeful Spirit',
+					altNames: [
+						'vs'
+					]
+				},
+				{
+					name: 'Venomancer',
+					altNames: [
+					]
+				},
+				{
+					name: 'Viper',
+					altNames: [
+						'Netherdrake'
+					]
+				},
+				{
+					name: 'Visage',
+					altNames: [
+						'Necrolic'
+					]
+				},
+				{
+					name: 'Warlock',
+					altNames: [
+					]
+				},
+				{
+					name: 'Weaver',
+					altNames: [
+						'Nerubian'
+					]
+				},
+				{
+					name: 'Windranger',
+					altNames: [
+						'wr'
+					]
+				},
+				{
+					name: 'Winter Wyvern',
+					altNames: [
+						'ww'
+					]
+				},
+				{
+					name: 'Witch Doctor',
+					altNames: [
+						'wd'
+					]
+				},
+				{
+					name: 'Wraith King',
+					altNames: [
+						'Skeleton',
+						'wk'
+					]
+				},
+				{
+					name: 'Zeus',
+					altNames: [
+						'Lord of Olympus'
+					]
+				}
+			];
 			for (var i = 0; i < heroes.length; i++) {
+				var altNames = [];
+				if (heroes[i] = namesLookup[i].name) {
+					altNames = namesLookup[i].altNames;
+				}
 				this.heroes[i] = {
 					heroIndex: i,
 					name: heroes[i],
+					altNames: altNames,
 					img: 'http://www.dotabuff.com/' + heroes_bg[i],
 					winrate: parseFloat(heroes_wr[i]),
 					enemyMatchups: win_rates[i],
@@ -271,7 +933,13 @@
 		transform: function (array, filterString) {
 			var substring = filterString.toString().toLowerCase();
 			return array.filter(function (item) {
-				return (item.name.toLowerCase().indexOf(substring) > -1);
+				var found = (item.name.toLowerCase().indexOf(substring) > -1);
+				for (var i = 0; i < item.altNames.length; i++) {
+					if (item.altNames[i].toLowerCase().indexOf(substring) > -1) {
+						found = true;
+					}
+				}
+				return found;
 			})
 		}
 	});
@@ -283,8 +951,9 @@
 			'<div class="row">' +
 			'	<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">' +
 			'		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 185px;">' +
-			'			<div style="margin-top: 15px;"></div>' +
-			'			<input type="search" id="filterInput" class="form-control" placeholder="Search" style="width: 157px;" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">' +
+			'			<div style="margin-top: 15px;">' +
+			'				<input type="search" id="filterInput" class="form-control" placeholder="Search" style="width: 157px;" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">' +
+			'			</div>' +
 			'			<ul class="nav nav-pills nav-stacked" style="margin-top: 5px; margin-bottom: 15px; margin-right: 10px;">' +
 			'				<li class="nav-item" *ngFor="#hero of heroes | filterHeroes:filterString">' +
 			'					<div class="btn-group" role="group">' +
