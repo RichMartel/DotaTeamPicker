@@ -14,57 +14,68 @@
 				{
 					name: 'Alchemist',
 					altNames: [
+						'Razzil Darkbrew'
 					]
 				},
 				{
 					name: 'Ancient Apparition',
 					altNames: [
+						'Kaldr',
 						'aa'
 					]
 				},
 				{
 					name: 'Anti-Mage',
 					altNames: [
+						'Magina',
 						'am'
 					]
 				},
 				{
 					name: 'Arc Warden',
 					altNames: [
+						'Zet',
 						'aw'
 					]
 				},
 				{
 					name: 'Axe',
 					altNames: [
+						'Mogul Khan'
 					]
 				},
 				{
 					name: 'Bane',
 					altNames: [
+						'Atropos'
 					]
 				},
 				{
 					name: 'Batrider',
 					altNames: [
+						'Jinzakk',
 						'br'
 					]
 				},
 				{
 					name: 'Beastmaster',
 					altNames: [
+						'Rexxar',
+						'Karroch',
 						'bm'
 					]
 				},
 				{
 					name: 'Bloodseeker',
 					altNames: [
+						'StrygWyr',
 						'bs'
 					]
 				},
 				{
 					name: 'Bounty Hunter',
 					altNames: [
+						'Gondar',
 						'bh'
 					]
 				},
@@ -72,30 +83,35 @@
 					name: 'Brewmaster',
 					altNames: [
 						'Pandaren',
+						'Mangix',
 						'bm'
 					]
 				},
 				{
 					name: 'Bristleback',
 					altNames: [
+						'Rigwarl',
 						'bb'
 					]
 				},
 				{
 					name: 'Broodmother',
 					altNames: [
+						'Black Archnia',
 						'bm'
 					]
 				},
 				{
 					name: 'Centaur Warrunner',
 					altNames: [
+						'Bradwarden',
 						'cw'
 					]
 				},
 				{
 					name: 'Chaos Knight',
 					altNames: [
+						'Nessaj',
 						'ck'
 					]
 				},
@@ -121,12 +137,14 @@
 				{
 					name: 'Crystal Maiden',
 					altNames: [
+						'Rylai Crestfall',
 						'cm'
 					]
 				},
 				{
 					name: 'Dark Seer',
 					altNames: [
+						'Ishkafel',
 						'ds'
 					]
 				},
@@ -139,17 +157,20 @@
 				{
 					name: 'Death Prophet',
 					altNames: [
+						'Krobelus',
 						'dp'
 					]
 				},
 				{
 					name: 'Disruptor',
 					altNames: [
+						'Thrall'
 					]
 				},
 				{
 					name: 'Doom',
 					altNames: [
+						'Lucifer'
 					]
 				},
 				{
@@ -162,18 +183,21 @@
 				{
 					name: 'Drow Ranger',
 					altNames: [
+						'Travex',
 						'dr'
 					]
 				},
 				{
 					name: 'Earth Spirit',
 					altNames: [
+						'Kaolin',
 						'es'
 					]
 				},
 				{
 					name: 'Earthshaker',
 					altNames: [
+						'Raigor Stonehoof',
 						'es'
 					]
 				},
@@ -181,34 +205,40 @@
 					name: 'Elder Titan',
 					altNames: [
 						'Tauren Chieftan',
+						'Cairne Bloodhoof',
 						'et'
 					]
 				},
 				{
 					name: 'Ember Spirit',
 					altNames: [
+						'Xin',
 						'es'
 					]
 				},
 				{
 					name: 'Enchantress',
 					altNames: [
+						'Aiushtha',
 					]
 				},
 				{
 					name: 'Enigma',
 					altNames: [
+						'Darchrow'
 					]
 				},
 				{
 					name: 'Faceless Void',
 					altNames: [
+						'Darkterror',
 						'fv'
 					]
 				},
 				{
 					name: 'Gyrocopter',
 					altNames: [
+						'Aurel Vlaicu',
 						'gc'
 					]
 				},
@@ -221,6 +251,7 @@
 				{
 					name: 'Invoker',
 					altNames: [
+						'Kael'
 					]
 				},
 				{
@@ -238,11 +269,13 @@
 				{
 					name: 'Juggernaut',
 					altNames: [
+						'Yurnero'
 					]
 				},
 				{
 					name: 'Keeper of the Light',
 					altNames: [
+						'Ezalor',
 						'kotl'
 					]
 				},
@@ -255,6 +288,7 @@
 				{
 					name: 'Legion Commander',
 					altNames: [
+						'Tresdin',
 						'lc'
 					]
 				},
@@ -267,6 +301,7 @@
 				{
 					name: 'Lich',
 					altNames: [
+						'Kelthuzad'
 					]
 				},
 				{
@@ -291,6 +326,7 @@
 				{
 					name: 'Lone Druid',
 					altNames: [
+						'Syllabear',
 						'ld'
 					]
 				},
@@ -303,6 +339,7 @@
 				{
 					name: 'Lycan',
 					altNames: [
+						'Banehallow'
 					]
 				},
 				{
@@ -336,6 +373,7 @@
 				{
 					name: 'Naga Siren',
 					altNames: [
+						'Slithice',
 						'ns'
 					]
 				},
@@ -349,11 +387,13 @@
 				{
 					name: 'Necrophos',
 					altNames: [
+						'Rotundjere'
 					]
 				},
 				{
 					name: 'Night Stalker',
 					altNames: [
+						'Balanar',
 						'ns'
 					]
 				},
@@ -361,48 +401,56 @@
 					name: 'Nyx Assassin',
 					altNames: [
 						'Nerubian',
+						'Anubarak',
 						'na'
 					]
 				},
 				{
 					name: 'Ogre Magi',
 					altNames: [
+						'Aggron Stonebreaker',
 						'om'
 					]
 				},
 				{
 					name: 'Omniknight',
 					altNames: [
+						'Purist Thunderwrath',
 						'ok'
 					]
 				},
 				{
 					name: 'Oracle',
 					altNames: [
+						'Nerif'
 					]
 				},
 				{
 					name: 'Outworld Devourer',
 					altNames: [
 						'Obsidian Destroyer',
+						'Harbinger',
 						'od'
 					]
 				},
 				{
 					name: 'Phantom Assassin',
 					altNames: [
+						'Mortred',
 						'pa'
 					]
 				},
 				{
 					name: 'Phantom Lancer',
 					altNames: [
+						'Azwraith',
 						'pl'
 					]
 				},
 				{
 					name: 'Phoenix',
 					altNames: [
+						'Icarus'
 					]
 				},
 				{
@@ -426,6 +474,7 @@
 				{
 					name: 'Queen of Pain',
 					altNames: [
+						'Akasha',
 						'qop'
 					]
 				},
@@ -450,12 +499,14 @@
 				{
 					name: 'Sand King',
 					altNames: [
+						'Crixalis',
 						'sk'
 					]
 				},
 				{
 					name: 'Shadow Demon',
 					altNames: [
+						'Eredar',
 						'sd'
 					]
 				},
@@ -476,11 +527,13 @@
 				{
 					name: 'Silencer',
 					altNames: [
+						'Nortrom'
 					]
 				},
 				{
 					name: 'Skywrath Mage',
 					altNames: [
+						'Dragonus',
 						'sm',
 						'swm'
 					]
@@ -500,23 +553,27 @@
 				{
 					name: 'Sniper',
 					altNames: [
-						'Dwarven Sniper'
+						'Dwarven',
+						'Kardel Sharpeye'
 					]
 				},
 				{
 					name: 'Spectre',
 					altNames: [
+						'Mercurial'
 					]
 				},
 				{
 					name: 'Spirit Breaker',
 					altNames: [
+						'Barathrum',
 						'sb'
 					]
 				},
 				{
 					name: 'Storm Spirit',
 					altNames: [
+						'Raijin Thunderkeg',
 						'ss'
 					]
 				},
@@ -529,12 +586,14 @@
 				{
 					name: 'Techies',
 					altNames: [
-						'Goblin'
+						'Goblin',
+						'Squee Spleen and Spoon'
 					]
 				},
 				{
 					name: 'Templar Assassin',
 					altNames: [
+						'Lanaya',
 						'ta'
 					]
 				},
@@ -548,6 +607,7 @@
 				{
 					name: 'Tidehunter',
 					altNames: [
+						'Leviathan',
 						'th'
 					]
 				},
@@ -555,12 +615,14 @@
 					name: 'Timbersaw',
 					altNames: [
 						'Goblin Shredder',
+						'Rizzrak',
 						'ts'
 					]
 				},
 				{
 					name: 'Tinker',
 					altNames: [
+						'Boush'
 					]
 				},
 				{
@@ -572,40 +634,47 @@
 				{
 					name: 'Treant Protector',
 					altNames: [
+						'Rooftrellen',
 						'tp'
 					]
 				},
 				{
 					name: 'Troll Warlord',
 					altNames: [
+						'Jahrakal',
 						'tw'
 					]
 				},
 				{
 					name: 'Tusk',
 					altNames: [
+						'Ymir'
 					]
 				},
 				{
 					name: 'Undying',
 					altNames: [
+						'Dirge'
 					]
 				},
 				{
 					name: 'Ursa',
 					altNames: [
-						'Warrior'
+						'Warrior',
+						'Ulfsaar'
 					]
 				},
 				{
 					name: 'Vengeful Spirit',
 					altNames: [
+						'Shendelzare Silkwood',
 						'vs'
 					]
 				},
 				{
 					name: 'Venomancer',
 					altNames: [
+						'Lesale Deathbringer',
 						'vm'
 					]
 				},
@@ -624,29 +693,34 @@
 				{
 					name: 'Warlock',
 					altNames: [
+						'Demnok Lannik'
 					]
 				},
 				{
 					name: 'Weaver',
 					altNames: [
-						'Nerubian'
+						'Nerubian',
+						'Anubseran'
 					]
 				},
 				{
 					name: 'Windranger',
 					altNames: [
+						'Alleria',
 						'wr'
 					]
 				},
 				{
 					name: 'Winter Wyvern',
 					altNames: [
+						'Auroth',
 						'ww'
 					]
 				},
 				{
 					name: 'Witch Doctor',
 					altNames: [
+						'VolJin',
 						'wd'
 					]
 				},
@@ -654,6 +728,7 @@
 					name: 'Wraith King',
 					altNames: [
 						'Skeleton',
+						'Leoric',
 						'wk'
 					]
 				},
