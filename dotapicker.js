@@ -61,14 +61,13 @@
 					name: 'Beastmaster',
 					altNames: [
 						'Rexxar',
-						'Karroch',
 						'bm'
 					]
 				},
 				{
 					name: 'Bloodseeker',
 					altNames: [
-						'StrygWyr',
+						'Strygwyr',
 						'bs'
 					]
 				},
@@ -535,7 +534,6 @@
 					altNames: [
 						'Dragonus',
 						'sm',
-						'swm'
 					]
 				},
 				{
@@ -660,7 +658,6 @@
 				{
 					name: 'Ursa',
 					altNames: [
-						'Warrior',
 						'Ulfsaar'
 					]
 				},
@@ -674,8 +671,7 @@
 				{
 					name: 'Venomancer',
 					altNames: [
-						'Lesale Deathbringer',
-						'vm'
+						'Lesale Deathbringer'
 					]
 				},
 				{
@@ -720,7 +716,7 @@
 				{
 					name: 'Witch Doctor',
 					altNames: [
-						'VolJin',
+						'Voljin',
 						'wd'
 					]
 				},
