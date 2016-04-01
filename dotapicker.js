@@ -1122,15 +1122,23 @@
 			'					<li>The main matchup area will show the best picks for side/core, mid, and support heroes</li>' +
 			'					<li><span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possibe bad picks</span>, <span class="text-danger">Red = Very bad picks</span></li>' +
 			'				</ul>' +
+			'				<h4>Why use this counter-picker over others?</h4>' +
+			'				<ul style="text-shadow: none;">' +
+			'					<li>Its extremely fast</li>' +
+			'					<li>Its the only counter picker I have found that takes the winrate for that hero matchup into account (most counter-pickers only use advantages)</li>' +
+			'					<li>It has a unique sorting method that takes both winrates and advantages into account to make sure that the best picks show up at the top</li>' +
+			'					<li>Teammate lineup is weighted half as much as enemy lineup in order to make sure that appropriate counters are shown</li>' +
+			'					<li>Enemy carries are weighted more than normal heroes so that the counters will be more focused around that carry</li>' +
+			'					<li>It highlights good and bad picks to make it easy to notice</li>' +
+			'					<li>You can search via the Dota 2 name (Spirit Breaker), the Dota 1 names (Barathrum), or the abbreviations (sb)</li>' +
+			'					<li>It works on your tablet or even smartphone (although phone is not recommended)</li>' +
+			'				</ul>' +
 			'				<h4>How it works?</h4>' +
 			'				<ul style="text-shadow: none;">' +
 			'					<li>The data used to determine best picks is gathered from <a href="http://www.dotabuff.com/">Dotabuff</a> matchup data, and <a href="http://dotamax.com/">Dotamax</a> teammate data</li>' +
 			'					<li>The data is gathered using an external perl script that builds the data import</li>' +
 			'					<li>Win rates are averaged based on the heroes picked</li>' +
 			'					<li>Advantages are the (average advantage + cumulative advantage) / 2</li>' +
-			'					<li>Teammate lineup is weighted half as much as enemy lineup in order to make sure that appropriate counters are shown</li>' +
-			'					<li>Enemy carries are weighted more than normal heroes so that the counters will be more focused around that carry</li>' +
-			'					<li>Sorting takes both winrates and advantages into account</li>' +
 			'				</ul>' +
 			'				<h4>Inspiration and history?</h4>' +
 			'				<ul style="text-shadow: none;">' +
@@ -1141,9 +1149,10 @@
 			'				</ul>' +
 			'				<h4>Credits?</h4>' +
 			'				<ul style="text-shadow: none;">' +
-			'					<li><a href="http://steamcommunity.com/profiles/76561198031077846">Relentless</a> - My main man, teammate, QA, and patient friend</li>' +
+			'					<li><a href="http://steamcommunity.com/profiles/76561198031077846">Relentless</a> - My teammate, QA tester, and patient friend</li>' +
 			'					<li><a href="https://github.com/onur">Onur Aslan</a> - For providing a decent counter picker that others could look at</li>' +
 			'					<li><a href="http://www.dotabuff.com/">Dotabuff</a> &amp; <a href="http://dotamax.com/">Dotamax</a> - For providing the data</li>' +
+			'					<li><a href="http://www.dota2.com/">Dota 2</a> - For the addictive and highly competitive game</li>' +
 			'				</ul>' +
 			'				<h4>Interested in contributing?</h4>' +
 			'				<ul style="text-shadow: none;">' +
