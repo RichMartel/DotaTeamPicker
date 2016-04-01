@@ -69,7 +69,7 @@ sub get_winrates_of_hero {
 
   $DEBUG and warn "Getting winrates of $hero\n";
 
-  print 'Getting dotabuff counter winrates of: ' . $hero . "\n";
+  print 'Getting dotabuff counter winrates for: ' . $hero . "\n";
 
   my $content = get ('http://dotabuff.com/heroes/' .
                      hero_link ($hero) .
@@ -82,8 +82,8 @@ sub get_winrates_of_hero {
 
   my (@heros) = $content =~ /$re/g;
 
-  print 'Matches found: ' . scalar @heros . "\n";
-  print join("\n",@heros),"\n";
+  #print 'Matches found: ' . scalar @heros . "\n";
+  print join(", ", @heros), "\n";
 
   my $c = 0;
   my @a;
@@ -135,7 +135,7 @@ sub get_winrates_with_teammate {
 
   $DEBUG and warn "Getting winrates of $hero\n";
 
-  print 'Getting dotamax teammate winrates of: ' . $hero . "\n";
+  print 'Getting dotamax teammate winrates for: ' . $hero . "\n";
 
   my $browser = LWP::UserAgent->new;
   my @headers = ('Accept-Language' => 'en-US');
@@ -146,8 +146,8 @@ sub get_winrates_with_teammate {
 
   my (@heros) = $content->content =~ /<span class="hero-name-list">(.*?)<\/span><\/td><td><div style="height: 10px">(.*?)%<\/div><div class="segment segment-.*?" style="width:.*?%;"><\/div><\/td><!--.*?--><td><div style="height: 10px">(.*?)%<\/div><div class="segment segment-gold" style="width:.*?%;"><\/div><\/td><td><div style="height: 10px">(.*?)<\/div>/gs;
 
-  print 'Matches found: ' . scalar @heros . "\n";
-  print join("\n",@heros),"\n";
+  #print 'Matches found: ' . scalar @heros . "\n";
+  print join(", ", @heros), "\n";
 
   my $c = 0;
   my @a;
@@ -165,8 +165,6 @@ sub get_winrates_with_teammate {
       @a = ();
     }
   }
-
-  print join("\n",@heros),"\n";
 
 }
 
