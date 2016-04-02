@@ -813,7 +813,6 @@
 				'Zeus'
 			];
 			this.carryHeroes = [
-				'Alchemist',
 				'Anti-Mage',
 				'Arc Warden',
 				'Chaos Knight',
@@ -822,32 +821,21 @@
 				'Faceless Void',
 				'Gyrocopter',
 				'Invoker',
-				'Juggernaut',
 				'Legion Commander',
-				'Lifestealer',
-				'Lone Druid',
 				'Luna',
-				'Lycan',
 				'Medusa',
 				'Morphling',
 				'Naga Siren',
-				'Natures Prophet',
 				'Outworld Devourer',
 				'Phantom Assassin',
-				'Queen of Pain',
-				'Shadow Fiend',
-				'Slark',
 				'Sniper',
 				'Spectre',
 				'Sven',
-				'Templar Assassin',
 				'Terrorblade',
 				'Tiny',
 				'Troll Warlord',
 				'Ursa',
-				'Viper',
-				'Weaver',
-				'Wraith King'
+				'Viper'
 			];
 			this.jungleHeroes = [
 				'Bloodseeker',
