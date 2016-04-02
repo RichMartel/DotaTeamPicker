@@ -849,6 +849,16 @@
 				'Weaver',
 				'Wraith King'
 			];
+			this.jungleHeroes = [
+				'Bloodseeker',
+				'Chen',
+				'Enigma',
+				'Legion Commander',
+				'Lifestealer',
+				'Lycan',
+				'Natures Prophet',
+				'Sand King'
+			]
 		}],
 		getEnemiesSelected: function() {
 			return this.enemiesSelected;
@@ -899,7 +909,7 @@
 			this.supportMatchups = [];
 			this.midMatchups = [];
 			for (var i = 0; i < this.heroes.length; i++) {
-				this.matchups[i] = {heroIndex: i, advantage: 0, winrate: 0, class: ''};
+				this.matchups[i] = {heroIndex: i, advantage: 0, winrate: 0, class: '', heroType: ''};
 			}
 			// Add advantages and winrates
 			for (i = 0; i < this.enemiesSelected.length; i++) {
@@ -963,6 +973,16 @@
 				}
 				if (this.matchups[i].advantage < 0 && this.matchups[i].winrate < 50) {
 					this.matchups[i].class = 'list-group-item-danger';
+				}
+				for (c = 0; c < this.carryHeroes.length; c++) {
+					if (this.carryHeroes[c] === this.heroes[this.matchups[i].heroIndex].name) {
+						this.matchups[i].heroType += 'C';
+					}
+				}
+				for (var j = 0; j < this.jungleHeroes.length; j++) {
+					if (this.jungleHeroes[j] === this.heroes[this.matchups[i].heroIndex].name) {
+						this.matchups[i].heroType += 'J';
+					}
 				}
 			}
 			// Sort using both advantage and winrate
@@ -1068,6 +1088,8 @@
 			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
 			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
+			'							<br>' +
+			'							<abbr class="initialism text-right" title="C = Carry; J = Jungler">{{heroMatchup.heroType}}</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -1082,6 +1104,8 @@
 			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
 			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
+			'							<br>' +
+			'							<abbr class="initialism text-right" title="C = Carry; J = Jungler">{{heroMatchup.heroType}}</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -1096,6 +1120,8 @@
 			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
 			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
+			'							<br>' +
+			'							<abbr class="initialism text-right" title="C = Carry; J = Jungler">{{heroMatchup.heroType}}</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -1151,8 +1177,8 @@
 			'				<ul style="text-shadow: none;">' +
 			'					<li><a href="http://steamcommunity.com/profiles/76561198031077846">Relentless</a> - My teammate, QA tester, and patient friend</li>' +
 			'					<li><a href="https://github.com/onur">Onur Aslan</a> - For providing a decent counter picker that others could look at</li>' +
-			'					<li><a href="http://www.dotabuff.com/">Dotabuff</a> &amp; <a href="http://dotamax.com/">Dotamax</a> - For providing the data</li>' +
-			'					<li><a href="http://www.dota2.com/">Dota 2</a> - For the addictive and highly competitive game</li>' +
+			'					<li><a href="http://dotabuff.com">Dotabuff</a> &amp; <a href="http://dotamax.com">Dotamax</a> - For providing the data</li>' +
+			'					<li><a href="http://dota2.com">Dota 2</a> - For the addictive and highly competitive game</li>' +
 			'				</ul>' +
 			'				<h4>Interested in contributing?</h4>' +
 			'				<ul style="text-shadow: none;">' +
