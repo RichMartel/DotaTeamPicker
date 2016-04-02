@@ -1072,12 +1072,12 @@
 			'					<div *ngFor="#heroMatchup of coreMatchups" class="list-group-item {{heroMatchup.class}}" style="padding: .5rem .5rem;">' +
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
 			'						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>' +
-			'						<div class="pull-right">' +
+			'						<div class="pull-right text-right" style="margin-top: -6px; text-align: right;">' +
 			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
 			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism text-right" title="C = Carry; J = Jungler">{{heroMatchup.heroType}}</abbr>' +
+			'							<abbr class="initialism text-right" style="margin-right: 20px;" title="C = Carry (hard); J = Jungler">{{heroMatchup.heroType}}</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -1088,12 +1088,12 @@
 			'					<div *ngFor="#heroMatchup of midMatchups" class="list-group-item {{heroMatchup.class}}" style="padding: .5rem .5rem;">' +
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
 			'						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>' +
-			'						<div class="pull-right">' +
+			'						<div class="pull-right text-right" style="margin-top: -6px; text-align: right;">' +
 			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
 			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism text-right" title="C = Carry; J = Jungler">{{heroMatchup.heroType}}</abbr>' +
+			'							<abbr class="initialism text-right" style="margin-right: 20px;" title="C = Carry (hard); J = Jungler">{{heroMatchup.heroType}}</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
@@ -1104,12 +1104,12 @@
 			'					<div *ngFor="#heroMatchup of supportMatchups" class="list-group-item {{heroMatchup.class}}" style="padding: .5rem .5rem;">' +
 			'						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">' +
 			'						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>' +
-			'						<div class="pull-right">' +
+			'						<div class="pull-right text-right" style="margin-top: -6px; text-align: right;">' +
 			'							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>' +
 			'							<br>' +
 			'							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>' +
 			'							<br>' +
-			'							<abbr class="initialism text-right" title="C = Carry; J = Jungler">{{heroMatchup.heroType}}</abbr>' +
+			'							<abbr class="initialism text-right" style="margin-right: 20px;" title="C = Carry (hard); J = Jungler">{{heroMatchup.heroType}}</abbr>' +
 			'						</div>' +
 			'					</div>' +
 			'				</div>' +
