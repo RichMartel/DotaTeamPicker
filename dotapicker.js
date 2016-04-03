@@ -1173,10 +1173,6 @@
 			'				<ul style="text-shadow: none;">' +
 			'					<li><a href="https://github.com/RichMartel/DotaTeamPicker">Github</a> - Feel free to make pull requests for any changes, or send me feature requests</li>' +
 			'				</ul>' +
-			'				<br>' +
-			'				<div style="width: 100%">' +
-			'					<div class="g-comments" data-href="http://richmartel.github.io/DotaTeamPicker/" data-width="640" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>' +
-			'				</div>' +
 			'			</div>' +
 			'		</div>' +
 			'	</div>' +
