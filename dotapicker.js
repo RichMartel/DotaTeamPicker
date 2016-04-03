@@ -1134,6 +1134,7 @@
 			'					<li>When a teammate picks a hero, click the <span class="text-success">green [+] button</span> to add that hero to your team</li>' +
 			'					<li>You can remove individual heroes by clicking on their images in the team selection area</li>' +
 			'					<li>The main matchup area will show the best picks for side/core, mid, and support heroes</li>' +
+			'					<li>Remember, it will be up to you to pick the right hero for your situation, this app only provides general statistics</li>' +
 			'					<li><span class="text-info">Blue = Great picks</span>, <span class="text-success">Green = Good picks</span>, White = Decent picks, <span class="text-warning">Yellow = Possibe bad picks</span>, <span class="text-danger">Red = Very bad picks</span></li>' +
 			'				</ul>' +
 			'				<h4>Why use this counter-picker over others?</h4>' +
