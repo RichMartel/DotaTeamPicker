@@ -1174,9 +1174,8 @@
 			'					<li><a href="https://github.com/RichMartel/DotaTeamPicker">Github</a> - Feel free to make pull requests for any changes, or send me feature requests</li>' +
 			'				</ul>' +
 			'				<br>' +
-			'				<script src="https://apis.google.com/js/plusone.js"></script>' +
 			'				<div style="width: 100%">' +
-			'					<div class="g-comments" data-href="http://richmartel.github.io/DotaTeamPicker/" data-width="320" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>' +
+			'					<div class="g-comments" data-href="http://richmartel.github.io/DotaTeamPicker/" data-width="640" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>' +
 			'				</div>' +
 			'			</div>' +
 			'		</div>' +
