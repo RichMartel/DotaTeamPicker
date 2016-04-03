@@ -1033,7 +1033,7 @@
 		template: '' +
 			'<div class="row">' +
 			'	<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">' +
-			'		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 190px;">' +
+			'		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 200px;">' +
 			'			<div style="margin-top: 15px;">' +
 			'				<input type="search" id="filterInput" class="form-control" placeholder="Search" style="width: 157px;" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">' +
 			'			</div>' +
@@ -1041,7 +1041,7 @@
 			'				<li class="nav-item" *ngFor="#hero of heroes | filterHeroes:filterString">' +
 			'					<div class="btn-group" role="group">' +
 			'						<button type="button" class="btn btn-success" title="Add to my team" (click)="addFriendsSelected(hero)"><i class="fa fa-plus"></i></button>' +
-			'						<span class="btn" style="cursor: default; width: 66px; height: 38px; background: url({{hero.img}}); background-size: 66px 38px; vertical-align: bottom; padding-left: 5px; padding-top: 18px;" title="{{hero.name}}"><span style="text-align: left; font-size: 10px; background-color: rgba(32, 32, 32, 0.7);">{{hero.name}}</span></span>' +
+			'						<span class="btn" style="cursor: default; width: 66px; height: 38px; background: url({{hero.img}}); background-size: 66px 38px; vertical-align: bottom; padding-left: 5px; padding-top: 18px; text-align: left;" title="{{hero.name}}"><span style="font-size: 10px; background-color: rgba(32, 32, 32, 0.7);">{{hero.name.substring(0, 10)}}</span></span>' +
 			'						<button type="button" class="btn btn-danger" title="Add to enemy team" (click)="addEnemiesSelected(hero)"><i class="fa fa-plus"></i></button>' +
 			'					</div>' +
 			'				</li>' +
