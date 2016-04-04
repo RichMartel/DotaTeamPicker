@@ -834,8 +834,7 @@
 				'Terrorblade',
 				'Tiny',
 				'Troll Warlord',
-				'Ursa',
-				'Viper'
+				'Ursa'
 			];
 			this.jungleHeroes = [
 				'Bloodseeker',
