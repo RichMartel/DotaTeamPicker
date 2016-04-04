@@ -1040,7 +1040,7 @@
 			'				<li class="nav-item" *ngFor="#hero of heroes | filterHeroes:filterString">' +
 			'					<div class="btn-group" role="group">' +
 			'						<button type="button" class="btn btn-success" title="Add to my team" (click)="addFriendsSelected(hero)"><i class="fa fa-plus"></i></button>' +
-			'						<span class="btn" style="cursor: default; width: 66px; height: 38px; background: url({{hero.img}}); background-size: 66px 38px; vertical-align: bottom; padding-left: 5px; padding-top: 18px; text-align: left;" title="{{hero.name}}"><span style="font-size: 10px; background-color: rgba(32, 32, 32, 0.7);">{{hero.name.substring(0, 10)}}</span></span>' +
+			'						<span class="btn" style="cursor: default; width: 66px; max-width: 66px; height: 38px; background: url({{hero.img}}); background-size: 66px 38px; vertical-align: bottom; padding-left: 5px; padding-top: 18px; text-align: left; overflow: hidden; text-overflow: ellipsis;" title="{{hero.name}}"><span style="font-size: 10px; background-color: rgba(32, 32, 32, 0.7); width: 66px; max-width: 66px;">{{hero.name}}</span></span>' +
 			'						<button type="button" class="btn btn-danger" title="Add to enemy team" (click)="addEnemiesSelected(hero)"><i class="fa fa-plus"></i></button>' +
 			'					</div>' +
 			'				</li>' +
