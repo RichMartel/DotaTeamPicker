@@ -1070,6 +1070,7 @@
 					this.supportMatchups = this.selectionService.getSupportMatchups();
 					this.midMatchups = this.selectionService.getMidMatchups();
 				}
+				window.scrollTo(0, 0);
 				if (!this.touchBrowser) {
 					this.filterString = '';
 					document.getElementById("filterInput").focus();
@@ -1095,6 +1096,7 @@
 					this.supportMatchups = this.selectionService.getSupportMatchups();
 					this.midMatchups = this.selectionService.getMidMatchups();
 				}
+				window.scrollTo(0, 0);
 				if (!this.touchBrowser) {
 					this.filterString = '';
 					document.getElementById("filterInput").focus();
