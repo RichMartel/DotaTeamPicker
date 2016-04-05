@@ -1,8 +1,8 @@
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 13px;
 	background-color: #222B34;
 	color: #ddd;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
 	text-shadow: 1px 1px 2px black;
 }
 img {
@@ -11,4 +11,46 @@ img {
 .list-group {
 	color: #000;
 	text-shadow: none;
+}
+.dp-herolistcontainer {
+	height: 100vh;
+	overflow-y: auto;
+	position: fixed;
+	width: 200px;
+}
+.dp-herosearchcontainer {
+	margin-top: 15px;
+}
+.dp-herosearch {
+	width: 157px;
+}
+.dp-herolist {
+	margin-bottom: 15px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.dp-herolistimg {
+	background-size: 66px 38px;
+	cursor: default;
+	height: 38px;
+	max-width: 66px;
+	overflow: hidden;
+	padding-left: 5px;
+	padding-top: 18px;
+	text-align: left;
+	text-overflow: ellipsis;
+	vertical-align: bottom;
+	width: 66px;
+}
+.dp-herolistimgtext {
+	background-color: rgba(32, 32, 32, 0.7);
+	font-size: 10px;
+	max-width: 66px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 66px;
+}
+.dp-selectioncontainer {
+	margin-bottom: 15px;
+	margin-top: 15px;
 }

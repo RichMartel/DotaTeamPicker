@@ -1,26 +1,26 @@
 <div class="row">
 	<div class="col-lg-2 col-md-3 col-sm-4 col-xs-5">
-		<div style="overflow-y: auto; position: fixed; height: 100vh; width: 200px;">
-			<div style="margin-top: 15px;">
-				<input type="search" id="filterInput" class="form-control" placeholder="Search" style="width: 157px;" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">
+		<div class="dp-herolistcontainer">
+			<div class="dp-herosearchcontainer">
+				<input type="search" id="filterInput" class="form-control dp-herosearch" placeholder="Search" autofocus [(ngModel)]="filterString" *ngIf="!touchBrowser">
 			</div>
-			<ul class="nav nav-pills nav-stacked" style="margin-top: 5px; margin-bottom: 15px; margin-right: 10px;">
+			<ul class="nav nav-pills nav-stacked dp-herolist">
 				<li class="nav-item" *ngFor="#hero of heroes | filterHeroes:filterString">
 					<div class="btn-group" role="group">
 						<button type="button" class="btn btn-success" title="Add to my team" (click)="addFriendsSelected(hero)"><i class="fa fa-plus"></i></button>
-						<span class="btn" style="cursor: default; width: 66px; max-width: 66px; height: 38px; vertical-align: bottom; padding-left: 5px; padding-top: 18px; text-align: left; overflow: hidden; text-overflow: ellipsis; background-size: 66px 38px;" style="cursor: default; width: 66px; max-width: 66px; height: 38px; vertical-align: bottom; padding-left: 5px; padding-top: 18px; text-align: left; overflow: hidden; text-overflow: ellipsis; background-size: 66px 38px; background-image: url({{hero.img}});" title="{{hero.name}}"><span style="font-size: 10px; background-color: rgba(32, 32, 32, 0.7); width: 66px; max-width: 66px; overflow: hidden; text-overflow: ellipsis;">{{hero.name}}</span></span>
+						<span class="btn dp-herolistimg" style="background-image: url({{hero.img}});" title="{{hero.name}}"><span class="dp-herolistimgtext">{{hero.name}}</span></span>
 						<button type="button" class="btn btn-danger" title="Add to enemy team" (click)="addEnemiesSelected(hero)"><i class="fa fa-plus"></i></button>
 					</div>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<div class="col-lg-10 col-md-9 col-sm-8 col-xs-7" [hidden]="enemiesSelected.length < 1 && friendsSelected.length < 1" style="margin-top: 15px; margin-bottom: 15px;">
+	<div class="col-lg-10 col-md-9 col-sm-8 col-xs-7 dp-selectioncontainer" [hidden]="enemiesSelected.length < 1 && friendsSelected.length < 1">
 		<div class="row">
 			<button class="btn btn-primary center-block" (click)="removeAllSelected()">Clear</button>
 		</div>
 		<br>
-		<div class="row" style="height: {{imageHeight}}px;">
+		<div class="row" style="min-height: {{imageHeight}}px;">
 			<div class="col-md-6 col-xs-12">
 				<div><h6 class="text-danger">Enemy team:</h6></div>
 				<img *ngFor="#hero of enemiesSelected" (click)="removeEnemiesSelected(hero)" src="{{hero.img}}" class="img" width="{{imageWidth}}" title="Click to remove">
@@ -83,7 +83,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-lg-10 col-md-9 col-sm-8 col-xs-7" [hidden]="enemiesSelected.length > 0 || friendsSelected.length > 0" style="margin-top: 15px; margin-bottom: 15px; color: #222;">
+	<div class="col-lg-10 col-md-9 col-sm-8 col-xs-7 dp-selectioncontainer" [hidden]="enemiesSelected.length > 0 || friendsSelected.length > 0">
 		<div class="jumbotron">
 			<div class="container-fluid">
 				<h1 style="text-align: center;">Dota Team Picker</h1>
