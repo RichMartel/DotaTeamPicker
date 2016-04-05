@@ -54,6 +54,22 @@ img {
 	margin-bottom: 15px;
 	margin-top: 15px;
 }
+.dp-matchuprowtitle {
+	text-align: center;
+}
+.dp-matchupcell {
+	padding: .5rem .5rem;
+}
+.dp-matchupcellimg {
+	margin-right: 8px;
+}
+.dp-matchupcelldata {
+	margin-top: -6px;
+	text-align: right;
+}
+.dp-matchupcelldataherotype {
+	margin-right: 20px;
+}
 .jumbotron {
 	color: #222;
 }
