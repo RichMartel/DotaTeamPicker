@@ -1029,6 +1029,7 @@
 	app.AppComponent = ng.core.Component({
 		selector: 'app',
 		pipes: [app.FilterPipe],
+		directives: [app.MatchupComponent]
 		templateUrl: 'dotapicker.html'
 	})
 	.Class({
@@ -1125,6 +1126,16 @@
 			return (advantage > 0) ? '+' + advantage.toFixed(2) : advantage.toFixed(2)
 		}
 	});
+
+	app.MatchupComponent = ng.core.Component({
+		selector: 'matchup',
+		inputs: ['heroMatchup'],
+		templateUrl: 'matchup.html'
+	})
+	.Class({
+		constructor: [app.HeroService, function(heroService) {
+			this.heroes = heroService.get();
+		}]
 
 	document.addEventListener('DOMContentLoaded', function() {
 		ng.core.enableProdMode();

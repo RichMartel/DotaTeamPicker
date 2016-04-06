@@ -37,15 +37,7 @@
 				<h5 class="dp-matchuprowtitle">Side/core<span class="hidden-md-down"> heroes</span></h5>
 				<div class="list-group">
 					<div *ngFor="#heroMatchup of coreMatchups" class="list-group-item dp-matchupcell {{heroMatchup.class}}">
-						<img class="img-rounded dp-matchupcellimg" src="{{heroes[heroMatchup.heroIndex].img}}" width="80">
-						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>
-						<div class="pull-right text-right dp-matchupcelldata">
-							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>
-							<br>
-							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>
-							<br>
-							<abbr class="initialism text-right dp-matchupcelldataherotype" title="C = Carry (hard); J = Jungler">{{heroMatchup.heroType}}</abbr>
-						</div>
+						<matchup [heroMatchup]="heroMatchup"></matchup>
 					</div>
 				</div>
 			</div>
@@ -53,15 +45,7 @@
 				<h5 style="text-align: center;">Mid<span class="hidden-md-down"> heroes</span></h5>
 				<div class="list-group">
 					<div *ngFor="#heroMatchup of midMatchups" class="list-group-item dp-matchupcell {{heroMatchup.class}}">
-						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">
-						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>
-						<div class="pull-right text-right dp-matchupcelldata">
-							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>
-							<br>
-							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>
-							<br>
-							<abbr class="initialism text-right dp-matchupcelldataherotype" title="C = Carry (hard); J = Jungler">{{heroMatchup.heroType}}</abbr>
-						</div>
+						<matchup [heroMatchup]="heroMatchup"></matchup>
 					</div>
 				</div>
 			</div>
@@ -69,15 +53,7 @@
 				<h5 style="text-align: center;">Support<span class="hidden-md-down"> heroes</span></h5>
 				<div class="list-group">
 					<div *ngFor="#heroMatchup of supportMatchups" class="list-group-item dp-matchupcell {{heroMatchup.class}}">
-						<img class="img-rounded" src="{{heroes[heroMatchup.heroIndex].img}}" style="margin-right: 8px;" width="80">
-						<span class="hidden-md-down">{{heroes[heroMatchup.heroIndex].name}}</span>
-						<div class="pull-right text-right dp-matchupcelldata">
-							<abbr class="initialism text-right" title="Win rate">{{heroMatchup.winrate.toFixed(2)}}%</abbr>
-							<br>
-							<abbr class="initialism text-right" title="Advantage">{{formatAdvantage(heroMatchup.advantage)}}%</abbr>
-							<br>
-							<abbr class="initialism text-right dp-matchupcelldataherotype" title="C = Carry (hard); J = Jungler">{{heroMatchup.heroType}}</abbr>
-						</div>
+						<matchup [heroMatchup]="heroMatchup"></matchup>
 					</div>
 				</div>
 			</div>
