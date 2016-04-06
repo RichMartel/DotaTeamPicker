@@ -1121,9 +1121,6 @@
 			this.coreMatchups = [];
 			this.supportMatchups = [];
 			this.midMatchups = [];
-		},
-		formatAdvantage: function(advantage) {
-			return (advantage > 0) ? '+' + advantage.toFixed(2) : advantage.toFixed(2)
 		}
 	});
 
@@ -1135,7 +1132,10 @@
 	.Class({
 		constructor: [app.HeroService, function(heroService) {
 			this.heroes = heroService.get();
-		}]
+		}],
+		formatAdvantage: function(advantage) {
+			return (advantage > 0) ? '+' + advantage.toFixed(2) : advantage.toFixed(2)
+		}
 	});
 
 	document.addEventListener('DOMContentLoaded', function() {
