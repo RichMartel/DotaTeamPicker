@@ -1026,6 +1026,20 @@
 		}
 	});
 
+	app.MatchupComponent = ng.core.Component({
+		selector: 'dp-matchup',
+		inputs: ['heroMatchup'],
+		templateUrl: 'matchup.html'
+	})
+	.Class({
+		constructor: [app.HeroService, function(heroService) {
+			this.heroes = heroService.get();
+		}],
+		formatAdvantage: function(advantage) {
+			return (advantage > 0) ? '+' + advantage.toFixed(2) : advantage.toFixed(2)
+		}
+	});
+
 	app.AppComponent = ng.core.Component({
 		selector: 'dp-app',
 		pipes: [app.FilterPipe],
@@ -1121,20 +1135,6 @@
 			this.coreMatchups = [];
 			this.supportMatchups = [];
 			this.midMatchups = [];
-		}
-	});
-
-	app.MatchupComponent = ng.core.Component({
-		selector: 'dp-matchup',
-		inputs: ['heroMatchup'],
-		templateUrl: 'matchup.html'
-	})
-	.Class({
-		constructor: [app.HeroService, function(heroService) {
-			this.heroes = heroService.get();
-		}],
-		formatAdvantage: function(advantage) {
-			return (advantage > 0) ? '+' + advantage.toFixed(2) : advantage.toFixed(2)
 		}
 	});
 
