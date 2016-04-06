@@ -142,7 +142,7 @@ sub get_winrates_with_teammate {
 
   my $content = $browser->get ('http://dotamax.com/hero/detail/match_up_comb/' .
                      hero_link_dotamax($hero) .
-                     '/?time=month&skill=vh&ladder=y', @headers) or die;
+                     '/?time=month&ladder=y', @headers) or die;
 
   my (@heros) = $content->content =~ /<span class="hero-name-list">(.*?)<\/span><\/td><td><div style="height: 10px">(.*?)%<\/div><div class="segment segment-.*?" style="width:.*?%;"><\/div><\/td><!--.*?--><td><div style="height: 10px">(.*?)%<\/div><div class="segment segment-gold" style="width:.*?%;"><\/div><\/td><td><div style="height: 10px">(.*?)<\/div>/gs;
 
