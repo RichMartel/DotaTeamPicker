@@ -1029,7 +1029,7 @@
 	app.AppComponent = ng.core.Component({
 		selector: 'app',
 		pipes: [app.FilterPipe],
-		directives: [app.MatchupComponent]
+		directives: [app.MatchupComponent],
 		templateUrl: 'dotapicker.html'
 	})
 	.Class({
