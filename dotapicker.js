@@ -1027,7 +1027,7 @@
 	});
 
 	app.AppComponent = ng.core.Component({
-		selector: 'app',
+		selector: 'dp-app',
 		pipes: [app.FilterPipe],
 		directives: [app.MatchupComponent],
 		templateUrl: 'dotapicker.html'
@@ -1125,7 +1125,7 @@
 	});
 
 	app.MatchupComponent = ng.core.Component({
-		selector: 'matchup',
+		selector: 'dp-matchup',
 		inputs: ['heroMatchup'],
 		templateUrl: 'matchup.html'
 	})

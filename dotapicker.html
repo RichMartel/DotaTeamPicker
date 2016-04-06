@@ -37,7 +37,7 @@
 				<h5 class="dp-matchuprowtitle">Side/core<span class="hidden-md-down"> heroes</span></h5>
 				<div class="list-group">
 					<div *ngFor="#heroMatchup of coreMatchups" class="list-group-item dp-matchupcell {{heroMatchup.class}}">
-						<matchup [heroMatchup]="heroMatchup"></matchup>
+						<dp-matchup [heroMatchup]="heroMatchup"></dp-matchup>
 					</div>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 				<h5 style="text-align: center;">Mid<span class="hidden-md-down"> heroes</span></h5>
 				<div class="list-group">
 					<div *ngFor="#heroMatchup of midMatchups" class="list-group-item dp-matchupcell {{heroMatchup.class}}">
-						<matchup [heroMatchup]="heroMatchup"></matchup>
+						<dp-matchup [heroMatchup]="heroMatchup"></dp-matchup>
 					</div>
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 				<h5 style="text-align: center;">Support<span class="hidden-md-down"> heroes</span></h5>
 				<div class="list-group">
 					<div *ngFor="#heroMatchup of supportMatchups" class="list-group-item dp-matchupcell {{heroMatchup.class}}">
-						<matchup [heroMatchup]="heroMatchup"></matchup>
+						<dp-matchup [heroMatchup]="heroMatchup"></dp-matchup>
 					</div>
 				</div>
 			</div>
