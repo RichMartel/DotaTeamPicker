@@ -845,7 +845,17 @@
 				'Lycan',
 				'Natures Prophet',
 				'Sand King'
-			]
+			];
+			this.tankHeroes = [
+				'Abaddon',
+				'Axe',
+				'Brewmaster',
+				'Bristleback',
+				'Centaur Warrunner',
+				'Dragon Knight',
+				'Tidehunter',
+				'Wraith King'
+			];
 		}],
 		getEnemiesSelected: function() {
 			return this.enemiesSelected;
@@ -969,6 +979,11 @@
 				for (var j = 0; j < this.jungleHeroes.length; j++) {
 					if (this.jungleHeroes[j] === this.heroes[this.matchups[i].heroIndex].name) {
 						this.matchups[i].heroType += 'J';
+					}
+				}
+				for (var t = 0; t < this.tankHeroes.length; t++) {
+					if (this.tankHeroes[t] === this.heroes[this.matchups[i].heroIndex].name) {
+						this.matchups[i].heroType += 'T';
 					}
 				}
 			}
