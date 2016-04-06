@@ -1136,6 +1136,7 @@
 		constructor: [app.HeroService, function(heroService) {
 			this.heroes = heroService.get();
 		}]
+	});
 
 	document.addEventListener('DOMContentLoaded', function() {
 		ng.core.enableProdMode();
