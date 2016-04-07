@@ -856,6 +856,17 @@
 				'Tidehunter',
 				'Wraith King'
 			];
+			this.healerHeroes = [
+				'Chen',
+				'Dazzle',
+				'Oracle',
+				'Io',
+				'Necrophos',
+				'Omniknight',
+				'Treant Protector',
+				'Warlock',
+				'Witch Doctor'
+			];
 		}],
 		getEnemiesSelected: function() {
 			return this.enemiesSelected;
@@ -984,6 +995,11 @@
 				for (var t = 0; t < this.tankHeroes.length; t++) {
 					if (this.tankHeroes[t] === this.heroes[this.matchups[i].heroIndex].name) {
 						this.matchups[i].heroType += 'T';
+					}
+				}
+				for (var h = 0; h < this.healerHeroes.length; h++) {
+					if (this.healerHeroes[h] === this.heroes[this.matchups[i].heroIndex].name) {
+						this.matchups[i].heroType += 'H';
 					}
 				}
 			}
